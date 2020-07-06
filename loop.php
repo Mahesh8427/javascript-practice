@@ -23,7 +23,9 @@ do{
 
 // for loops
 
-for($x=0;$x<=100;$x++);
+for($x=0;$x<=100;$x++){
+    echo $x;
+}
 
 
 

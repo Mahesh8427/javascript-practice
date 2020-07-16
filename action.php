@@ -1,11 +1,11 @@
 <?php
 
-print_r($_GET);
+print_r($_POST);
 
-// define variables and set to empty values
+
 $name = $Age = $email = $Address = $Contact= $comment= $Gender ="";
 
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = test_input($_POST["name"]);
   $Age = test_input($_POST["age"]);
   $email = test_input($_POST["email"]);

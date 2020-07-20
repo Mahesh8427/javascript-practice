@@ -40,6 +40,25 @@ document.getElementById('objects').innerHTML= person.fullname();
  document.getElementById("object").src='images/Devgn-1593007641.jpg';
  document.getElementById("objt").src='images/tenor.gif';
 
+
+
+// Constructor function for Person objects
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+// Create two Person objects
+var myFather = new Person("John", "Doe", 50, "blue");
+var myMother = new Person("Sally", "Rally", 48, "green");
+
+// Display age
+document.getElementById("constructor").innerHTML =
+"My father is " + myFather.age + ". My mother is " + myMother.age + ".";  
+
+
 //  Function return statement 
 var x=  multipliefunction(4,3);
 document.getElementById("multi").innerHTML=x;
@@ -56,7 +75,7 @@ function toCelsius(fahrenheit) {
   return (5/9) * (fahrenheit-32);
 } 
 }
- // simple Display from string 
+ //simple Display from string 
 function selffunction(){
       var txt1 ="hii my name is mahesh";
       var txt2 =" and i am \"__ \" yrs old";
@@ -65,7 +84,6 @@ function selffunction(){
 document.getElementById("hlo").innerHTML =txt4 +"<br>"+ typeof txt4 ;
   }
       "<br>"+"<br>";
-
    window.onload= myFunction;
 
    // Simple Array  change  with another array and sorting in the array 
@@ -153,4 +171,28 @@ var  fruits = ["Banana", "Orange", "Apple", "Mango"];
 function AddFunction() {
   fruits[6] = "Lemon";
  document.getElementById("undefined1").innerHTML = fruits;
+}
+
+"<br>"+"<br>";
+// from validation
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+/// check valdation method
+
+ function Validations(){ 
+    var inpObj = document.getElementById("id1");
+    if (!inpObj.checkValidity()) {
+      document.getElementById("check").innerHTML = inpObj.validationMessage;
+    } else {
+      document.getElementById("check").innerHTML = "Input OK";
+    } 
+  
  }
+
+
+

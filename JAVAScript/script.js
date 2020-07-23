@@ -59,6 +59,23 @@ document.getElementById("constructor").innerHTML =
 "My father is " + myFather.age + ". My mother is " + myMother.age + ".";  
 
 
+
+// Using prototype Objects..
+
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+Person.prototype.nationality = "English";
+Person.prototype.nationalitys = "hindi";
+
+var myFather = new Person("John", "Doe", 50, "blue");
+document.getElementById("prototype").innerHTML =
+"The nationality of my father is " + myFather.nationality + " , and " + myFather.nationalitys  + " . ";
+
 //  Function return statement 
 var x=  multipliefunction(4,3);
 document.getElementById("multi").innerHTML=x;
@@ -191,7 +208,35 @@ function validateForm() {
     } else {
       document.getElementById("check").innerHTML = "Input OK";
     } 
+   
+ }
+// This example uses the Objects defineProperty() method to add a getter and a setter.
+// set method
+
+ function setfunction(){
+  var person = {firstName:"John", lastName:"Doe"};
+
+  // Define a setter
+  Object.defineProperty(person, "fullName", {
+    set : function  lan(value) {return this.lang=value;}
+  });
+  person.lang="set method";
   
+  // Display full name
+  document.getElementById("set").innerHTML = person.lang;
+
+//              GETTER an Objects
+// Create an object:
+var person = {firstName:"John", lastName:"Doe"};
+
+// Define a getter
+Object.defineProperty(person, "fullName", {
+  get : function () {return this.firstName + " " + this.lastName;}
+});
+
+// Display full name
+document.getElementById("get").innerHTML = person.fullName;
+
  }
 
 

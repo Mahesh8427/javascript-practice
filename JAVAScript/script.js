@@ -237,7 +237,42 @@ Object.defineProperty(person, "fullName", {
 // Display full name
 document.getElementById("get").innerHTML = person.fullName;
 
+
  }
+
+//JavaScript Closures counting the counter 
+
+var add = (function () {
+  var counter = 0;
+  return function () {counter += 1; return counter;}
+})();
+
+function counterfunction(){
+  document.getElementById("counter").innerHTML = add();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

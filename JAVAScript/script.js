@@ -1,4 +1,4 @@
-
+/*
 function myfunction(){
 document.getElementById("demo").innerHTML="Gin Voicing <b>Company</b>";
    }
@@ -101,7 +101,7 @@ function selffunction(){
 document.getElementById("hlo").innerHTML =txt4 +"<br>"+ typeof txt4 ;
   }
       "<br>"+"<br>";
-   window.onload= myFunction;
+  
 
    // Simple Array  change  with another array and sorting in the array 
    function arrayfunction(){
@@ -241,6 +241,8 @@ document.getElementById("get").innerHTML = person.fullName;
  }
 
 //JavaScript Closures counting the counter 
+///This way add becomes a function. The "wonderful" part is that it can access the counter in the parent scope.
+
 
 var add = (function () {
   var counter = 0;
@@ -249,7 +251,60 @@ var add = (function () {
 
 function counterfunction(){
   document.getElementById("counter").innerHTML = add();
+
 }
+console.log(counterfunction());
+
+// Counting with a local variable. if you are define variable in global than add a variable counting 
+
+var counter = 0;
+ function addd(){
+
+ counter +=1;
+ return counter
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

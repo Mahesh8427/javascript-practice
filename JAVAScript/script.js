@@ -243,7 +243,7 @@ document.getElementById("get").innerHTML = person.fullName;
 //JavaScript Closures counting the counter 
 ///This way add becomes a function. The "wonderful" part is that it can access the counter in the parent scope.
 
-
+*/
 var add = (function () {
   var counter = 0;
   return function () {counter += 1; return counter;}
@@ -263,7 +263,7 @@ var counter = 0;
  counter +=1;
  return counter
 }
-*/
+
 
 
 

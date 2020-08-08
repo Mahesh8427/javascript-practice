@@ -1,34 +1,34 @@
-// //           Prototype 
-//    "use strict" 
-// function mahesh(first, last, age, eye) {
-//     this.firstName  = first;
-//     this.lastName  = last;
-//     this.Age = age;
-//     this.EyeColor = eye;
-//   }
+//           Prototype 
 
-//   mahesh.prototype.nationality = "indian";
+function mahesh(first, last, age, eye) {
+    this.firstName  = first;
+    this.lastName  = last;
+    this.Age = age;
+    this.EyeColor = eye;
+  }
+
+  mahesh.prototype.nationality = "indian";
 
   
-//   function kashyap(first, last, age, eye){
+  function kashyap(first, last, age, eye){
 
-//     mahesh.call(this, first, last, age, eye)
+    mahesh.call(this, first, last, age, eye)
 
-//   }
-//   //prototype inheritance objects create
+  }
+  //prototype inheritance objects create
 
-//   kashyap.prototype = Object.create(mahesh.prototype);
+  kashyap.prototype = Object.create(mahesh.prototype);
 
 
-//   kashyap.prototype.nationality = "HINDU";
+  kashyap.prototype.nationality = "HINDU";
 
-//   var mykashyap = new kashyap("mahesh", "mak", 325, "white",);
-//   //console.log(mykashyap);
-//   console.log(mykashyap.firstName);
-//   console.log(mykashyap.lastName);
-//   console.log(mykashyap.Age);
-//   console.log(mykashyap.EyeColor);
-//   console.log(mykashyap.nationality);
+  var mykashyap = new kashyap("mahesh", "mak", 325, "white",);
+  //console.log(mykashyap);
+  console.log(mykashyap.firstName);
+  console.log(mykashyap.lastName);
+  console.log(mykashyap.Age);
+  console.log(mykashyap.EyeColor);
+  console.log(mykashyap.nationality);
 
 
 
@@ -57,7 +57,7 @@ console.log(Person1.calculateAge());
 
 
 
-
+0
 
 
 

@@ -250,7 +250,7 @@ var add = (function () {
 })();
 
 function counterfunction(){
-  document.getElementById("counter").innerHTML = add();
+  // document.getElementById("counter").innerHTML = add();
 
 }
 console.log(counterfunction());

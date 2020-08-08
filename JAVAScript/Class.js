@@ -1,38 +1,39 @@
-// Simple Class crate and  Accessing Function 
+// //Simple Class crate and  Accessing Function 
 
 
-'use strict' 
-class Polygon { 
-   constructor(height, width) { 
-      this.h = height; 
-      this.w = width;
-   } 
-   test() { 
-      console.log("The height of the tandoor: ", this.h) 
-      console.log("The width of the tandoor: ",this. w) 
-   } 
-} 
+// 'use strict'
+// class Polygon {
+//    constructor(height, width) {
+//       this.h = height;
+//       this.w = width;
+//    }
+//    test() {
+//       console.log("The height of the tandoor: ", this.h)
+//       console.log("The width of the tandoor: ", this.w)
+//    }
+// }
 
-//creating an instance or Objects words are same   
-var Obj = new Polygon(10,20); 
-Obj.test(); 
-
-
+// //creating an instance or Objects words are same   
+// var Obj = new Polygon(10, 20);
+// Obj.test();
 
 
-"use strict"
+
+
+//clss is create anf perfrom setter and getter.
+           "use strict" 
 class Student {
    constructor(rno, fname, lname) {
       this.r = rno
       this.f = fname
       this.l = lname
-   
+
    }
    set rollno(number) {
-      this.rn = number
+      this.rno = number
    }
    get fullname() {
-      return this.f + this.l;
+      return this.f;
 
    }
 }
@@ -43,17 +44,7 @@ s2.r = 420
 console.log(s1)
 console.log(s1.fullname)
 console.log(s2)
-console.log(s2.fullname)
-
-
-
-
-
-
-
-
-
-
+console.log(s2.l)
 
 
 

@@ -1,4 +1,4 @@
-// ////////////////////////////////////
+// //Function(1)
 // function print(mak, mah) {
 
 //     if (mak.gender == 'male' && mak.maritalStatus == 'married' || mak.maritalStatus == 'unmarried'
@@ -21,7 +21,9 @@
 
 
 
-////////////////////////////////////
+
+// //Function(2)
+
 // function print(mak) {
 
 //     if (mak.gender == 'female' && mak.maritalStatus == 'married') {
@@ -43,13 +45,9 @@
 
 
 
-
-function show(callback) {
-    let person = { name: "Jesse", gender: "female", maritalStatus: "unmarried" }
-    callback(person, 'Good Afternoon', (response) => {console.log(response)
-    ;console.log("dfvgdf")});
-}
-show(function(mak, greeting, callback) {
+//Function(3)
+function print(mak, greeting, callback) {
+   // console.log(callback+greeting + "! " + salutaion + " " + mak.name)
     var salutaion = "Mr.";
     if (mak.gender == 'female' && mak.maritalStatus == 'married') {
         salutaion = "Mrs.";
@@ -57,5 +55,14 @@ show(function(mak, greeting, callback) {
         salutaion = "Ms.";
     }
     callback(greeting + "! " + salutaion + " " + mak.name)
-});
+};
+
+function show(callback) {
+    let person = { name: "Jesse", gender: "female", maritalStatus: "married" }
+    callback(person, 'Good Afternoon', function as(response) {console.log(" hello "+response);
+    });
+}
+
+show(print)
+
 

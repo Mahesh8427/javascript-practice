@@ -1,51 +1,51 @@
-// //Function(1)
-// function print(mak, mah) {
+//CallbackFunction(1)
+function print(mak, mah) {
 
-//     if (mak.gender == 'male' && mak.maritalStatus == 'married' || mak.maritalStatus == 'unmarried'
-//         && mah.gender == 'female' && mah.maritalStatus == 'married') {
-//         console.log(" Mr." + mak.name + " IS " + mak.maritalStatus);
+    if (mak.gender == 'male' && mak.maritalStatus == 'married' || mak.maritalStatus == 'unmarried'
+        && mah.gender == 'female' && mah.maritalStatus == 'married') {
+        console.log(" Mr." + mak.name + " IS " + mak.maritalStatus);
 
-//     } else if (mah.gender == 'female' && mah.maritalStatus == 'married') {
-//         console.log(" Mrs. " + mah.name + " IS " + mah.maritalStatus);
-//     } else {
-//         console.log(" Miss." + mah.name + " Is " + mah.maritalStatus);
-//     }
-// }
+    } else if (mah.gender == 'female' && mah.maritalStatus == 'married') {
+        console.log(" Mrs. " + mah.name + " IS " + mah.maritalStatus);
+    } else {
+        console.log(" Miss." + mah.name + " Is " + mah.maritalStatus);
+    }
+}
 
-// function show(callback) {
-//     let person = { name: "Jacks", gender: "male", maritalStatus: "umarried" }
-//     let person1 = { name: "Alina", gender: "female", maritalStatus: "unmarried" }
-//     callback(person, person1);
-// }
-// show(print);
-
-
-
-
-// //Function(2)
-
-// function print(mak) {
-
-//     if (mak.gender == 'female' && mak.maritalStatus == 'married') {
-
-//         console.log(" Mrs." + mak.name);
-//     } else if (mak.gender == 'female' && mak.maritalStatus == 'unmarried') {
-//         console.log(" Miss." + mak.name);
-//     } else {
-//         console.log(" Mr. ");
-//     }
-// }
-//     function show(callback) {
-//         let person = { name: "Jacks", gender: "female", maritalStatus: "unmarried" }
-//          callback(person);
-//     }
-//      show(print);
+function show(callback) {
+    let person = { name: "Jacks", gender: "male", maritalStatus: "umarried" }
+    let person1 = { name: "Alina", gender: "female", maritalStatus: "unmarried" }
+    callback(person, person1);
+}
+show(print);
 
 
 
 
+//CallbackFunction(2)
 
-//Function(3)
+function print(mak) {
+
+    if (mak.gender == 'female' && mak.maritalStatus == 'married') {
+
+        console.log(" Mrs." + mak.name);
+    } else if (mak.gender == 'female' && mak.maritalStatus == 'unmarried') {
+        console.log(" Miss." + mak.name);
+    } else {
+        console.log(" Mr. ");
+    }
+}
+    function show(callback) {
+        let person = { name: "Jacks", gender: "female", maritalStatus: "unmarried" }
+         callback(person);
+    }
+     show(print);
+
+
+
+
+
+//CallbackFunction(3)
 function print(mak, greeting, callback) {
    // console.log(callback+greeting + "! " + salutaion + " " + mak.name)
     var salutaion = "Mr.";

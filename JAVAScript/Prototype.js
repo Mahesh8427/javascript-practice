@@ -20,9 +20,9 @@ function mahesh(first, last, age, eye) {
   kashyap.prototype = Object.create(mahesh.prototype);
 
 
-  kashyap.prototype.nationality = "HINDU";
+  //kashyap.prototype.nationality = "HINDU";
 
-  var mykashyap = new kashyap("mahesh", "mak", 325, "white",);
+  var mykashyap = new kashyap("mahesh", "mak", 325, "white");
   //console.log(mykashyap);
   console.log(mykashyap.firstName);
   console.log(mykashyap.lastName);
@@ -33,25 +33,25 @@ function mahesh(first, last, age, eye) {
 
 
 
-//   //adding calculateAge function() method to the Prototype property 
- "use strict"
-function Person(name, job, yearOfBirth){   
-  this.Name= name; 
-  this.Job= job; 
-  this.Birth= yearOfBirth; 
-} 
-// adding calculateAge() method to the Prototype property 
-Person.prototype.calculateAge= function(){  
-  console.log("this is age",(2020- this.Birth)); 
+// //   //adding calculateAge function() method to the Prototype property 
+//  "use strict"
+// function Person(name, job, yearOfBirth){   
+//   this.Name= name; 
+//   this.Job= job; 
+//   this.Birth= yearOfBirth; 
+// } 
+// // adding calculateAge() method to the Prototype property 
+// Person.prototype.calculateAge= function(){  
+//   console.log("this is age",(2020- this.Birth)); 
    
-} 
+// } 
  
-// creating Object Person1 
-let Person1= new Person('Jenni', 'clerk', 1986);  
-let Person2= new Person('Madhu', 'Developer', 1997); 
+// // creating Object Person1 
+// let Person1= new Person('Jenni', 'clerk', 1986);  
+// let Person2= new Person('Madhu', 'Developer', 1997); 
 
-console.log(Person1);
-console.log(Person1.calculateAge());
+// console.log(Person1);
+// console.log(Person1.calculateAge());
 
 
 

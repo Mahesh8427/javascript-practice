@@ -21,7 +21,7 @@
 
 
 //clss is create anf perfrom setter and getter.
-           "use strict" 
+           
 class Student {
    constructor(rno, fname, lname) {
       this.r = rno

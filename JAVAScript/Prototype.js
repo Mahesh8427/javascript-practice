@@ -20,7 +20,7 @@ function mahesh(first, last, age, eye) {
   kashyap.prototype = Object.create(mahesh.prototype);
 
 
-  //kashyap.prototype.nationality = "HINDU";
+  kashyap.prototype.nationality = "HINDU";
 
   var mykashyap = new kashyap("mahesh", "mak", 325, "white");
   //console.log(mykashyap);

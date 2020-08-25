@@ -5,29 +5,33 @@ class Human {
     constructor(name, age, height) {
         this.name = name;
         this.age = age;
-            this.height = height;
+        this.height = height;
     }
 
 }
-class Students extends Human {
+class Student extends Human {
     rollno;
     stream;
-    constructor(name, age, height, stream, rollno) {
+    constructor(name,age,height,stream,rollno) {
+
         super(name, age, height)
         this.stream = stream;
         this.rollno = rollno;
-         
-    }
+    
+        }
     payFees(fees) {
-        this.fees = fees;
+        return "One Month School Fee " + this.name + " Students is:- " + fees;
     }
+    // attendanceSheet(){
+    //     var a = "Today I am Sir" 
+    // }
 
 }
-class Teachers extends Human {
+class Teacher extends Human {
     employeeid;
     salary;
-    constructor(employeeid, salary, name, age, height) {
-        super(name, age, height);
+    constructor(name, age, employeeid, salary) {
+        super(name, age);
         this.employeeid = employeeid;
         this.salary = salary;
     }
@@ -42,35 +46,30 @@ class Teachers extends Human {
 class College {
     name;
     department;
+    students = []
+    teachers = []
     constructor(name, department) {
         this.name = name;
         this.department = department;
+    }
+
+    addStudentList(obj) {
+        this.students = obj
 
     }
-    // get Teachers() {
-    //     return this.sal
-    // }
-
-    // set Student(submit) {
-    //     this.fee = submit
-    // }
-
 }
+var Students = [new Student("Price",20,5.5,"BCA",105), new Student("Rockey",26,5.5,"MCA",105),new Student("Alina",20,6,"Arts",105)];
 
-let objects = new Students("Price", 15, 5.5, "BCA", 105)
-console.log(objects.fees);
-objects.Payfee = 500;
-console.log(objects);
-let tobjects = new Teachers(1205, 2000, "gaurav joshi", 45, 5.5)
-console.log(tobjects);
-tobjects.Bonus = 10000;
+var object = new College("S.C.D College", "HR Dept")
+object.addStudentList(Students[0]);
+object.addStudentList(Students[1]);
+object.addStudentList(Students[2]);
 
-console.log(tobjects);
-// console.log("Get Teacher Salary", funds.Teachers)
-// funds.Student = 1000;
-// console.log(funds.fee);
-// funds.Salary = 5000;
-// console.log(funds.sal);
+//console.log(Students[0].payFees(300));
+// let tobj = new Teachers("gaurav joshi", 45, 1205, 20000)
+// console.log(tobj);
+// tobj.Bonus = 100;
+// console.log("Bonus:" + tobj.Bonus);
 
 
 

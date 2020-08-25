@@ -66,10 +66,6 @@ function show(callback) {
 
 show(print);
 
-
-
-
-
 //Pratice(2)High Oreder Function with Arrow Function and CallbackFunction(4)...
 const mak = (object, cb) => {
     cb(object.name, object.p);

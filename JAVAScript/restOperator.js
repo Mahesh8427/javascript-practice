@@ -1,4 +1,4 @@
-// // Rest operator:- bascially it is use inside the function and add a parameter and disp on Array from.. 
+ // // Rest operator:- bascially it is use inside the function and add a parameter and disp on Array from.. 
 // function a(a, b, c,...args){
     
 //     return a+b+c+args;
@@ -11,7 +11,8 @@
 
  let s =["jack","mak","alina","rockey"]
   var  [a,b,...args]=s
- console.log(b);
+  console.log(a);
+  console.log(b);
  console.log(args);
 
  

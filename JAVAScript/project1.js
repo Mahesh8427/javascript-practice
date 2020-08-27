@@ -70,20 +70,20 @@ var Students = [new Student("Price", 20, 5.5, "BCA", 105), new Student("Rockey",
 let Teachers = [new Teacher("gaurav joshi", 45, 1205, 20000), new Teacher("OP Gupta", 55, 1205, 120000)]
 
 var object = new College("S.C.D College", "HR Dept")
-// object.addStudentList(Students[0]);
-// object.addStudentList(Students[1]);
-// object.addStudentList(Students[2]);
-// console.log(object.displayStd);
+object.addStudentList(Students[0]);
+object.addStudentList(Students[1]);
+object.addStudentList(Students[2]);
+console.log(object.displayStd);
 
-// console.log(Students[1].payFees(300));
+console.log(Students[1].payFees(300));
 
-// object.addTeacherList(Teachers[0]);
-// object.addTeacherList(Teachers[1]);
+object.addTeacherList(Teachers[0]);
+object.addTeacherList(Teachers[1]);
 
 
-// Teachers[0].Bonusadd = 1000;
-// Teachers[1].Bonusadd = 2000;
-// console.log(Teachers)
+Teachers[0].Bonusadd = 1000;
+Teachers[1].Bonusadd = 2000;
+console.log(Teachers)
 console.log(Students)
 
 

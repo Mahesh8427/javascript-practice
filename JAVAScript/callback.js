@@ -24,47 +24,47 @@
 
 //CallbackFunction(2)
 
-function print(mak) {
+// function print(mak) {
 
-    if (mak.gender == 'female' && mak.maritalStatus == 'married') {
+//     if (mak.gender == 'female' && mak.maritalStatus == 'married') {
 
-        console.log(" Mrs." + mak.name);
-    } else if (mak.gender == 'female' && mak.maritalStatus == 'unmarried') {
-        console.log(" Miss." + mak.name);
-    } else {
-        console.log(" Mr. ");
-    }
-}
-function show(callback) {
-    let person = { name: "Jacks", gender: "female", maritalStatus: "unmarried" }
-    callback(person);
-}
-show(print);
-
-
+//         console.log(" Mrs." + mak.name);
+//     } else if (mak.gender == 'female' && mak.maritalStatus == 'unmarried') {
+//         console.log(" Miss." + mak.name);
+//     } else {
+//         console.log(" Mr. ");
+//     }
+// }
+// function show(callback) {
+//     let person = { name: "Jacks", gender: "female", maritalStatus: "unmarried" }
+//     callback(person);
+// }
+// show(print);
 
 
 
-//CallbackFunction(3)
-function print(mak, greeting, callback) {
-    // console.log(callback+greeting + "! " + salutaion + " " + mak.name)
-    var salutaion = "Mr.";
-    if (mak.gender == 'female' && mak.maritalStatus == 'married') {
-        salutaion = "Mrs.";
-    } else if (mak.gender == 'female' && mak.maritalStatus == 'unmarried') {
-        salutaion = "Ms.";
-    }
-    callback(greeting + "! " + salutaion + " " + mak.name)
-};
 
-function show(callback) {
-    let person = { name: "Jesse", gender: "female", maritalStatus: "married" }
-    callback(person, 'Good Afternoon', function as(response) {
-        console.log(" hello " + response);
-    });
-}
 
-show(print);
+// //CallbackFunction(3)
+// function print(mak, greeting, callback) {
+//     // console.log(callback+greeting + "! " + salutaion + " " + mak.name)
+//     var salutaion = "Mr.";
+//     if (mak.gender == 'female' && mak.maritalStatus == 'married') {
+//         salutaion = "Mrs.";
+//     } else if (mak.gender == 'female' && mak.maritalStatus == 'unmarried') {
+//         salutaion = "Ms.";
+//     }
+//     callback(greeting + "! " + salutaion + " " + mak.name)
+// };
+
+// function show(callback) {
+//     let person = { name: "Jesse", gender: "female", maritalStatus: "married" }
+//     callback(person, 'Good Afternoon', function as(response) {
+//         console.log(" hello " + response);
+//     });
+// }
+
+// show(print);
 
 //Pratice(2)High Oreder Function with Arrow Function and CallbackFunction(4)...
 const mak = (object, cb) => {

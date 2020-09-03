@@ -1,3 +1,4 @@
+
 class Departments {
     name;
     constructor(name) {
@@ -9,20 +10,41 @@ class Departments {
 
 class EmployeeDetails {
     name;
-    attendence
+    attendence;
+    department;
     position;
     basesalary;
     esi;
     pf;
-    constructor(name, departments, attendence, position, basesalary, esi, pf) {
+    constructor(name, base_salary, esi, pf) {
         this.name = name;
-        this.departments = departments;
-        this.position = position;
-        this.basesalary = basesalary;
-        this.attendence = attendence;
+        this.basesalary = base_salary;
         this.esi = esi;
         this.pf = pf;
     }
+    setDepartment(dept) {
+        this.department = dept;
+    }
+
+    setAttendence(att) {
+        this.attendence = att;
+    }
+
+    setPosition(post) {
+        this.position = post;
+
+    }
+    setName(name) {
+        this.name = name;
+    }
+
+    get Position() {
+        return this.position;
+    }
+
+
+
+
 }
 
 class Company {
@@ -57,32 +79,39 @@ class Company {
 
     }
 
+    get PF(){
+
+    }
 }
-// instance of department class
-//new Departments("Accounting")
-//new Departments("Development")
-//new Departments("Designing")
-//new Departments("ABCDevops")
-// var hr = new Departments("HR")
+
 
 // instance of eemployees class
-var employeesObjects = [new EmployeeDetails("Raman", new Departments("Accounting"), 30, "Senior", 20000, 320, 1000),
-new EmployeeDetails("Deepak", new Departments("Development"), 28, "Junior", 15000, 224, 0),
-new EmployeeDetails("Rahul", new Departments("Accounting"), 22, "Junior", 13000, 152.53, 0),
-new EmployeeDetails("Kapil", new Departments("Designing"), 20, "Junior", 8000, 85.33, 00),
-new EmployeeDetails("Rajat ", new Departments("HR"), 30, "Senior", 40000, 0, 2000),
-new EmployeeDetails("Nisha", new Departments("Development"), 24, "Senior", 30000, 384, 1200),
-new EmployeeDetails("RajKumar", new Departments("DevOps"), 22, "Junior", 34000, 398.93, 1246.67),
-new EmployeeDetails("Rohit", new Departments("Development"), 27, "Junior", 22000, 316.8, 990),
-new EmployeeDetails("Narinder", new Departments("Development"), 21, "Junior", 24000, 368.8, 840),
-new EmployeeDetails("Narinder", new Departments("Accounting"), 20, "Senior", 26000, 277.33, 866.67)]
+var employeesObjects = [{ name: "Raman", departments: new Departments("Accounting"), attendence: 30, position: "Senior", base_salary: 20000, esi: true, pf: true },
+{ name: "Deepak", departments: new Departments("Development"), attendence: 28, position: "Junior", base_salary: 15000, esi: true, pf: false },
+{ name: "Rahul", departments: new Departments("Accounting"), attendence: 22, position: "Junior", base_salary: 13000, esi: true, pf: false },
+{ name: "Kapil", departments: new Departments("Designing"), attendence: 20, position: "Junior", base_salary: 8000, esi: true, pf: false },
+{ name: "Rajat ", departments: new Departments("HR"), attendence: 30, position: "Senior", base_salary: 40000, esi: false, pf: true },
+{ name: "Nisha", departments: new Departments("Development"), attendence: 24, position: "Senior", base_salary: 30000, esi: true, pf: true },
+{ name: "RajKumar", departments: new Departments("DevOps"), attendence: 22, position: "Junior", base_salary: 34000, esi: true, pf: true },
+{ name: "Rohit", departments: new Departments("Development"), attendence: 27, position: "Junior", base_salary: 22000, esi: true, pf: true },
+{ name: "Narinder", departments: new Departments("Development"), attendence: 21, position: "Junior", base_salary: 24000, esi: true, pf: true },
+{ name: "Maki", departments: new Departments("Accounting"), attendence: 20, position: "Senior", base_salary: 26000, esi: true, pf: true }];
 
 let companyObjects = new Company("ABCDevops")
+
+let empObjects = new EmployeeDetails()
+
 
 for (var i = 0; i < employeesObjects.length; i++) {
     companyObjects.addEmployees(employeesObjects[i])
 
-}
+    empObjects.setDepartment(employeesObjects[i].departments);
+    empObjects.setAttendence(employeesObjects[i].attendence);
+    empObjects.setPosition(employeesObjects[i].position);
+    empObjects.setName(employeesObjects[i].name);
 
-//console.log(companyObjects.searchEmployees("Raman").basesalary);// search Employee name get attendence
+    //console.log(empObjects.attendence)// print all name,attendence,departments etc.
+}
+//console.log(companyObjects.searchEmployees("Raman"));// search Employee name get attendence
 //console.log(companyObjects.displayAllEmployees); // print all employees are add in array of employees
+//console.log(companyObjects)

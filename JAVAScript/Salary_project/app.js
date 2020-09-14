@@ -1,17 +1,10 @@
  
- require('./data');
-const Company = require('./Entities/Company');
-const Employee = require('./Entities/Employees');
-const Department = require('./Entities/Department');
+var Company = require('./Entities/Company')
 
-//import {Entities} from './Entities/Company';
-//import * as Company from './Entities/Company';
-
-//  import * as Employees from './Entities/Employees';
-let companyObjects = new Entities/Company("ABCDevops");
+let companyObjects = new Company("ABCDevops");
 
 for (var i = 0; i < employeesObjects.length; i++) {
-    let empObjects = new Entities/Employee(employeesObjects[i].name, employeesObjects[i].base_salary, employeesObjects[i].esi, employeesObjects[i].pf)
+    let empObjects = new Employee(employeesObjects[i].name, employeesObjects[i].base_salary, employeesObjects[i].esi, employeesObjects[i].pf)
     companyObjects.addEmployees(empObjects);
 
     empObjects.setDepartment(employeesObjects[i].departments);
@@ -32,4 +25,5 @@ for (var i = 0; i < employeesObjects.length; i++) {
 //console.log(companyObjects.searchEmployees("Raman").getDepartment());// search Employee name get attendance
 //console.log(companyObjects.getAllEmployees()); // print all employees are add in array of employees
 //console.log(companyObjects) //  company AllObjects print
-console.log(companyObjects.displayALLEmplyoees());
+//console.log(companyObjects.displayALLEmplyoees());
+console.log(companyObjects);
